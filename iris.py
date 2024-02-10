@@ -37,7 +37,7 @@ log_reg = LogisticRegression(n_jobs = -1)
 log_reg.fit(X_train, y_train)
 # S2.2: Copy the following code in the 'improved_iris_app.py' file after the previous code.
 # Create a function that accepts an ML mode object say 'model' and the four features of an Iris flower as inputs and returns its name.
-@st.cache_data()
+@st.cache()
 def prediction(_model, sepal_length, sepal_width, petal_length, petal_width):
   species = _model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
   species = species[0]
